@@ -1,4 +1,4 @@
-2CREATE TABLE employee (
+CREATE TABLE employee (
     employee_id INT PRIMARY KEY,
     employee_email VARCHAR(30) UNIQUE,
     name VARCHAR(50),
