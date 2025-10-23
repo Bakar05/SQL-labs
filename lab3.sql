@@ -1,4 +1,4 @@
--- Create Employee table with relevant fields
+-- Created Employee table 
 CREATE TABLE Employee (
     emp_id INT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
