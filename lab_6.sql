@@ -1,3 +1,4 @@
+-- Created Employee table 
 CREATE TABLE Employee (
     emp_id INT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -10,6 +11,7 @@ CREATE TABLE Employee (
     city VARCHAR(30)
 );
 
+-- Insert sample employee records
 INSERT INTO Employee (emp_id, first_name, last_name, department, job_title, salary, hire_date, gender, city) VALUES
     (1, 'Ali', 'Khan', 'HR', 'HR manager', 85000.00, '2019-04-15', 'Male', 'Lahore'),
     (2, 'Sara', 'Malik', 'IT', 'Software Engineer', 95000.00, '2020-01-12', 'Female', 'Karachi'),
@@ -58,3 +60,30 @@ SELECT city, COUNT(emp_id) as total_employee
 FROM Employee
 GROUP BY city;
     
+SELECT department, job_title, SUM(salary) as total_salary
+FROM Employee
+GROUP BY department, job_title;
+
+SELECT department, city, COUNT(emp_id) as total_employee
+FROM Employee
+GROUP BY department, city;
+
+SELECT department, gender, AVG(salary) as average_salary
+FROM Employee
+GROUP BY department, gender;
+
+SELECT job_title, city, MAX(salary) as highest_salary
+FROM Employee
+GROUP BY job_title, city;
+
+SELECT department, gender, COUNT(emp_id) as total_employee
+FROM Employee
+GROUP BY department, gender;
+
+SELECT job_title, gender, AVG(salary) as average_salary
+FROM Employee
+GROUP BY job_title, gender;
+
+SELECT department, job_title, gender, COUNT(emp_id) as total_employee
+FROM Employee
+GROUP BY department, job_title, gender;
