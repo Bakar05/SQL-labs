@@ -1,4 +1,3 @@
--- Created Employee table 
 CREATE TABLE Employee (
     emp_id INT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
@@ -7,11 +6,10 @@ CREATE TABLE Employee (
     job_title VARCHAR(50) NOT NULL,
     salary DECIMAL(10,2),
     hire_date DATE,
-	  gender VARCHAR(30),
+	gender VARCHAR(30),
     city VARCHAR(30)
 );
 
--- Insert sample employee records
 INSERT INTO Employee (emp_id, first_name, last_name, department, job_title, salary, hire_date, gender, city) VALUES
     (1, 'Ali', 'Khan', 'HR', 'HR manager', 85000.00, '2019-04-15', 'Male', 'Lahore'),
     (2, 'Sara', 'Malik', 'IT', 'Software Engineer', 95000.00, '2020-01-12', 'Female', 'Karachi'),
